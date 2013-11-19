@@ -31,7 +31,8 @@ app.configure(function()
 	app.use(express.bodyParser());
 
 	app.use(compiler({ src: __dirname + '/app/assets/less', dest: __dirname + '/public/css', prefix: '/public/css', debug: false }));
-
+	app.use('/public', express.static(__dirname + '/public'));
+	
 	app.use(function(req, res, next) {
 		res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
 		res.locals.session = req.session;
