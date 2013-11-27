@@ -1,0 +1,20 @@
+doctype
+html
+	head
+		title express bootstrap application
+
+		link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css")
+		link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")
+		link(rel="stylesheet", href="/public/css/style.css")
+
+	body(id=bodyId, class=bodyClass + " page")
+		#wrap
+			header#site-header
+			#content
+				block content
+			footer#site-footer
+
+		block scripts
+			script(src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js")
+			script(src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js")
+			script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js")

@@ -45,7 +45,7 @@ app.configure(function()
  * Routes
  */
 
-var controller_name = require('./app/controllers/controller_name')(config);
+var welcome = require('./app/controllers/welcome')(config);
 app.get('/', controller_name.index);
 
 /**
